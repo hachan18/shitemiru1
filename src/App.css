@@ -1,0 +1,318 @@
+/* 基本設定 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+}
+
+/* セクション内の中央寄せ */
+.center-text {
+  text-align: center; /* 中央寄せ */
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Heroセクションの背景画像 */
+.hero {
+  height: 100vh; /* 画面全体の高さを設定 */
+  background: url('https://user0514.cdnw.net/shared/img/thumb/aig-ai230829B084-xl_TP_V.jpg') no-repeat center center/cover; /* 背景画像 */
+  display: flex;
+  flex-direction: column; /* 子要素を縦並びに設定 */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  opacity: 0; /* 初期状態で透明 */
+  animation: fadeIn 2s forwards; /* フェードインアニメーション */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold; /* 太字に変更 */
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  font-weight: bold; /* 太字に変更 */
+}
+
+
+.hero .btn-primary {
+  background-color: #0056b3;
+  padding: 12px 30px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.hero .btn-primary:hover {
+  background-color: #003d80;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem; /* 小さい画面でフォントサイズを小さくする */
+  }
+
+  .hero p {
+    font-size: 1.2rem; /* パラグラフのフォントサイズを調整 */
+  }
+
+  .hero .btn-primary {
+    padding: 10px 20px; /* ボタンのサイズ調整 */
+  }
+}
+
+/* お客様の声セクション */
+.success-stories {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.success-stories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.story {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 500px; /* 幅を指定して中央に配置 */
+}
+
+.story i {
+  font-size: 2rem; /* アイコンのサイズ */
+  margin-bottom: 15px;
+  color: #007BFF; /* アイコンの色 */
+}
+
+.story h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.story p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* サービスセクション */
+.services {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center; /* セクション内を中央寄せ */
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.services .service-item {
+  display: flex;
+  justify-content: center; /* アイコンとテキストを中央寄せ */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.services .service-item i {
+  font-size: 2rem; /* アイコンの大きさを調整 */
+  margin-right: 15px; /* アイコンとテキストの間隔 */
+}
+
+.service-card {
+  display: inline-block;
+  width: 250px;
+  margin: 20px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center; /* サービスカード内のテキストを中央寄せ */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .service-card {
+    width: 90%; /* モバイルで幅を広げる */
+    margin-bottom: 30px;
+  }
+}
+
+/* サービスの詳細セクション */
+.details {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.details h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.details .detail-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.details .detail-item i {
+  font-size: 2rem; /* アイコンのサイズ */
+  margin-right: 15px;
+  color: #007BFF; /* アイコンの色 */
+}
+
+.details .detail-item p {
+  font-size: 1.3rem;
+}
+
+
+/* よくある質問セクション */
+.faq {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.faq .faq-items {
+  display: flex; /* 横並びにするためにflexを使用 */
+  justify-content: center; /* アイテムを中央寄せ */
+  gap: 40px; /* アイテム間の隙間を調整 */
+}
+
+.faq .faq-item {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-width: 350px; /* 最大幅を設定 */
+  text-align: left; /* テキストを左寄せ */
+}
+
+.faq .faq-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.faq .faq-item p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .faq .faq-items {
+    flex-direction: column; /* スマホなど小さな画面では縦並びに変更 */
+    gap: 20px; /* アイテム間の隙間を小さく */
+  }
+}
+
+
+/* CTAセクション */
+.cta {
+  padding: 60px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+}
+
+.cta .btn-primary {
+  background-color: #0056b3;
+  padding: 12px 30px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.cta .btn-primary:hover {
+  background-color: #003d80;
+}
+/* フッター */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center; /* 中央寄せ */
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #777;
+  margin: 0; /* 上下のマージンを削除して中央寄せ */
+}
+
+.footer .footer-info {
+  font-size: 1rem;
+  color: #777;
+}
